@@ -15,4 +15,4 @@ const { MongoClient, ServerApiVersion } = require("mongodb");
 const DB_USERNAME = process.env.db_username;
 const DB_PASSWORD = process.env.db_password;
 
-const uri = "mongodb+srv://Databaseuser1:<db_password>@vape-cluster.okno4.mongodb.net/?retryWrites=true&w=majority&appName=Vape-Cluster"
+const uri = "mongodb+srv://" + DB_USERNAME + ":" + DB_PASSWORD + "@vape-cluster.okno4.mongodb.net/?retryWrites=true&w=majority&appName=Vape-Cluster"
