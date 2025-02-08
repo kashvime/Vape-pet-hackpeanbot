@@ -1,12 +1,29 @@
-<h2>Your Puffs and Money Insights</h2>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vape Insights</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h2>Your Puffs and Money Insights</h2>
+    
+    <div id="insights"></div>
+    <div id="mood-insight" class="insight-box"></div>
 
-<div id="insights"></div>
-<div id="savings-prediction"></div>
+    <div id="savings-prediction"></div>
 
-<div class="chart-container">
-    <canvas id="puffsChart"></canvas>
-</div>
+    <div class="chart-container">
+        <canvas id="puffsChart"></canvas>
+    </div>
+    <div class="chart-container">
+        <canvas id="costChart"></canvas>
+    </div>
+    <div class="chart-container">
+        <canvas id="energyChart"></canvas> <!-- Added this for Energy Over Time Chart -->
+    </div>
 
-<div class="chart-container">
-    <canvas id="costChart"></canvas>
-</div>
+    <script src="script.js"></script>
+</body>
+</html>
