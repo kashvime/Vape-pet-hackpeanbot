@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: antiquewhite;
+}
+
+body {
+    background-color: black;
+
+}
+
+.title {
+    text-align: center;
+    padding: 5vw;
+}
+
+.onboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.holder {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    width: 70vw;
+}
+
+.onboardchild {
+    width: 100%;
+    border-bottom: white 1px solid;
+    padding: 2.5vw;
+}
+
+.select {
+    background-color: black;
+    color: white;
+}
+
+.onboardbutton {
+    width: 50%;
+    color: black;
+    border-radius: 5px;
+    height: 15vh;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.onboardbutton:hover {
+    height: 16vh;
+    width: 55%;
+}
+
+.onboardbutton:active {
+    height: 14vh;
+    width: 45%;
+}
+
+.buttonholder {
+    display: flex;
+    justify-content: center;
+    padding: 2.5vw;
+}
