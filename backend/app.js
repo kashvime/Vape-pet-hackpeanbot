@@ -80,8 +80,51 @@ process.on('uncaughtException', async (err) => {
 
 
 
+//THIS IS AN EXAMPLE API ROUTE
+app.post("/api/setnotes",async (request,response)=>{
+    const requestDoc = request.body.doc //this becomes our list of JSONs given to us by the frontend
+
+    const requestUser = request.body.username //this becomes our username
+
+    console.log(requestDoc)
+    console.log(requestUser)
+    if (requestDoc.length == 0){
+        response.json({
+            command_type:"set user",
+            message: ' command failed.'
+        })
+
+        return false
+    }
+
+    const result = await collection.deleteOne({ username: requestUser });//remove the previous entry with the same user
 
 
+    collection.insertOne(request.body)
+    response.json({
+        command_type:"set notes",
+        message: ' command received successfully'
+    })
+})
+
+
+//THIS IS AN EXAMPLE API ROUTE
+app.post("/api/getnotes",async (request,response)=>{
+    const requestUser = request.body.username
+    const query = await collection.findOne({username:requestUser})
+    console.log(query.doc)
+    response.json({
+        notes:query.doc
+    })
+})
+
+
+//THIS IS AN EXAMPLE API ROUTE
+//serve the index.html file which is the entry point for our React app
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname,'frontend', 'dist', 'index.html'));
+});
 
 
 
