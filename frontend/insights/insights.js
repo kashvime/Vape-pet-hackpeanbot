@@ -3,7 +3,7 @@ const chartScript = document.createElement('script');
 chartScript.src = "https://cdn.jsdelivr.net/npm/chart.js";
 document.head.appendChild(chartScript);
 
-// 1) Daily Data (energy & mood)
+// Daily Data (energy & mood)
 // energy(1–10) and mood(1–6).
 const dailyData = [
   { date: "2025-01-01", energy: 6, mood: 6 },
