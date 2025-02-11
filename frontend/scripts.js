@@ -21,7 +21,7 @@ class Vape {
 
 class TrackingPurchase {
     constructor(date, mood, vape) {
-        this.date = date
+        this.date = date;
         this.mood = mood;
         this.vape = vape;
     }
